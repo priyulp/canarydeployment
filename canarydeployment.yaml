@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:1.21:v2
+        image: nginx:v2
