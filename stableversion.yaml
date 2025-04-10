@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-stable
   labels:
-  app: myapp
+    app: myapp
 spec:
   replicas: 3
   selector:
