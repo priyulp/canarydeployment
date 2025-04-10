@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: app-canary
   labels: 
-  app: myapp  
+    app: myapp  
 spec:
   replicas: 1
   selector:
