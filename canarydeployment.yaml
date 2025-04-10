@@ -3,18 +3,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-canary
+  labels: 
+  app: myapp  
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: myapp
       version: canary
   template:
     metadata:
       labels:
-        app: ngnix
+        app: 
         version: canary
     spec:
       containers:
-      - name: nginx
-        image: nginx:v2
+      - name: myapp
+        image: nginx:1.21:v2
