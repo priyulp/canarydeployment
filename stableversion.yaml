@@ -2,18 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-stable
+  labels:
+  app: myapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tomcat
+      app: myapp
       version: stable
   template:
     metadata:
       labels:
-        app: tomcat
+        app: myapp
         version: stable
     spec:
       containers:
-      - name: tomcat
+      - name: myapp
         image: tomcat:v1
