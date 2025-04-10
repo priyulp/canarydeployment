@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: nginx
       version: canary
   template:
     metadata:
       labels:
-        app: myapp
+        app: ngnix
         version: canary
     spec:
       containers:
-      - name: myapp
-        image: myapp:v2
+      - name: nginx
+        image: nginx:v2
