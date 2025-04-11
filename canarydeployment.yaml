@@ -21,3 +21,5 @@ spec:
       - name: myapp
         image: nginx:latest
         imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
