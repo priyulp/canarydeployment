@@ -17,5 +17,6 @@ spec:
       containers:
       - name: tomcat
         image: tomcat:10.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
