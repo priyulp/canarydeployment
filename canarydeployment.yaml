@@ -1,25 +1,21 @@
-# Canary Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-canary
-  labels: 
-    app: myapp  
+  name: tomcat-canary
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: tomcat
       version: canary
   template:
     metadata:
       labels:
-        app: myapp
+        app: tomcat
         version: canary
     spec:
       containers:
-      - name: myapp
-        image: nginx:latest
-        imagePullPolicy: IfNotPresent
+      - name: tomcat
+        image: tomcat:10.0
         ports:
         - containerPort: 8080
