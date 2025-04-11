@@ -20,3 +20,5 @@ spec:
       - name: myapp
         image: tomcat:latest
         imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
